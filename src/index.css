@@ -1,3 +1,49 @@
 header {
   background-color: black;
 }
+
+main {
+  margin-top: 135px;
+}
+
+.movie-card,
+.tvSerie-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-img-container {
+  position: relative;
+}
+
+.movie-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.movie-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover .movie-info {
+  opacity: 1;
+  background-color: black;
+  color: white;
+}
+
+.card:hover .movie-img {
+  opacity: 0.3;
+}

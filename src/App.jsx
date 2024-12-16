@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { GlobalContext } from "./context/GlobalContext";
 import AppHeader from "./components/AppHeader";
+import AppMain from "./components/AppMain";
 import "./App.css";
 
 function App() {
@@ -23,11 +24,15 @@ function App() {
   }
 
   return (
-    <AppHeader
-      handleInput={handleInput}
-      handleSubmit={handleSubmit}
-      searchQuery={searchQuery}
-    />
+    <>
+      <AppHeader
+        handleInput={handleInput}
+        handleSubmit={handleSubmit}
+        searchQuery={searchQuery}
+      />
+
+      <AppMain showTitle={showTitle} movies={movies} />
+    </>
   );
 }
 
