@@ -4,10 +4,31 @@ import AppHeader from "./components/AppHeader";
 import "./App.css";
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [showTitle, setShowTitles] = useState(false);
   const { movies, fetchMovies, tvSeries, fetchTvSeries } =
     useContext(GlobalContext);
 
-  return <AppHeader />;
+  function handleInput(e) {
+    const dataSearch = e.target.value;
+    setSearchQuery(dataSearch);
+  }
+
+  function handleSubmit() {
+    if (searchQuery !== "") {
+      fetchMovies(searchQuery);
+      fetchTvSeries(searchQuery);
+      setShowTitles(true);
+    }
+  }
+
+  return (
+    <AppHeader
+      handleInput={handleInput}
+      handleSubmit={handleSubmit}
+      searchQuery={searchQuery}
+    />
+  );
 }
 
 export default App;
