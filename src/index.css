@@ -4,6 +4,12 @@ header {
 
 main {
   margin-top: 135px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 52%,
+    rgba(121, 26, 9, 1) 97%
+  );
 }
 
 .movie-card,
@@ -12,18 +18,21 @@ main {
   overflow: hidden;
 }
 
-.movie-img-container {
+.movie-img-container,
+.tvSerie-img-container {
   position: relative;
 }
 
-.movie-img {
+.movie-img,
+.tvSerie-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: opacity 0.3s ease-in-out;
 }
 
-.movie-info {
+.movie-info,
+.tvSerie-info {
   position: absolute;
   top: 0;
   left: 0;
@@ -38,12 +47,14 @@ main {
   flex-direction: column;
 }
 
-.card:hover .movie-info {
+.card:hover .movie-info,
+.card:hover .tvSerie-info {
   opacity: 1;
   background-color: black;
   color: white;
 }
 
-.card:hover .movie-img {
+.card:hover .movie-img,
+.card:hover .tvSerie-img {
   opacity: 0.3;
 }

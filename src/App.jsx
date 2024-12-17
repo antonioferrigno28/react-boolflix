@@ -31,7 +31,7 @@ function App() {
         searchQuery={searchQuery}
       />
 
-      <AppMain showTitle={showTitle} movies={movies} />
+      <AppMain showTitle={showTitle} movies={movies} tvSeries={tvSeries} />
     </>
   );
 }

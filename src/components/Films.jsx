@@ -18,6 +18,7 @@ export default function Films({ movies }) {
                 <div className="card-body movie-info">
                   <h3 className="card-title">{movie.title}</h3>
                   <h6 className="card-subtitle mb-2">{movie.original_title}</h6>
+                  <div>{movie.overview}</div>
                 </div>
               </div>
             </div>
