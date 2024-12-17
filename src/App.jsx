@@ -23,6 +23,21 @@ function App() {
     }
   }
 
+  const renderstars = (rating) => {
+    let stars = [];
+    const fullstars = Math.round(rating / 2);
+    for (let i = 0; i < 5; i++) {
+      if (i < fullstars) {
+        stars.push(
+          <i key={i} className="bi bi-star-fill" style={{ color: "gold" }}></i>
+        );
+      } else {
+        stars.push(<i key={i} className="bi bi-star"></i>);
+      }
+    }
+    return stars;
+  };
+
   return (
     <>
       <AppHeader
@@ -31,7 +46,12 @@ function App() {
         searchQuery={searchQuery}
       />
 
-      <AppMain showTitle={showTitle} movies={movies} tvSeries={tvSeries} />
+      <AppMain
+        showTitle={showTitle}
+        movies={movies}
+        tvSeries={tvSeries}
+        renderstars={renderstars}
+      />
     </>
   );
 }

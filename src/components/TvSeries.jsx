@@ -1,4 +1,9 @@
-export default function TvSeries({ tvSeries, Flag, languageFlag }) {
+export default function TvSeries({
+  tvSeries,
+  Flag,
+  languageFlag,
+  renderstars,
+}) {
   return (
     <div className="pb-5">
       <h1 className="text-white">Serie Tv</h1>
@@ -29,6 +34,16 @@ export default function TvSeries({ tvSeries, Flag, languageFlag }) {
                     code={languageFlag[tvSerie.original_language] || null}
                     style={{ width: 30, height: 30 }}
                   />
+                </div>
+                <div className="d-flex align-items-center">
+                  <h3 className="card-title me-2 netflix-text">Voto:</h3>
+                  <span className="ms-2">
+                    {Math.round(tvSerie.vote_average / 2)}
+                  </span>
+                  <span className="ps-2">
+                    {" "}
+                    {renderstars(tvSerie.vote_average)}
+                  </span>
                 </div>
               </div>
             </div>

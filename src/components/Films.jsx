@@ -1,4 +1,4 @@
-export default function Films({ movies, languageFlag, Flag }) {
+export default function Films({ movies, renderstars, languageFlag, Flag }) {
   return (
     <>
       <div className="mb-5">
@@ -50,6 +50,16 @@ export default function Films({ movies, languageFlag, Flag }) {
                       code={languageFlag[movie.original_language] || null}
                       style={{ width: 30, height: 30 }}
                     />
+                  </div>
+                  <div className="d-flex align-items-center">
+                    <h3 className="card-title me-2 netflix-text">Voto:</h3>
+                    <span className="ms-2">
+                      {Math.round(movie.vote_average / 2)}
+                    </span>
+                    <span className="ps-2">
+                      {" "}
+                      {renderstars(movie.vote_average)}
+                    </span>
                   </div>
                 </div>
               </div>
