@@ -2,12 +2,49 @@ header {
   background-color: black;
 }
 
+/* utils*/
+.button {
+  color: #e50914;
+  background-color: #141414;
+  border: 1px solid #e50914;
+  box-shadow: 0 0 5px #e50914, 0 0 5px #e50914 inset;
+}
+.button:before {
+  height: 0%;
+  width: 2px;
+}
+.button:hover {
+  color: #000000;
+  box-shadow: inset 0 0 10px #e50914, 0 0 20px #e50914 inset,
+    0 0 20px #777777 inset;
+}
+
+#input-boolflix {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #141414;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#input-boolflix:hover {
+  border-color: #e50914;
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.8);
+}
+
+/* main/body content*/
+
 main {
   margin-top: 135px;
-  background: rgb(0, 0, 0);
+
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 1) 52%,
+    rgb(29, 29, 29) 52%,
     rgba(121, 26, 9, 1) 97%
   );
 }
@@ -29,6 +66,8 @@ main {
   height: 100%;
   object-fit: cover;
   transition: opacity 0.3s ease-in-out;
+  border-radius: 0 !important;
+  border: 0 !important;
 }
 
 .movie-info,
@@ -57,4 +96,9 @@ main {
 .card:hover .movie-img,
 .card:hover .tvSerie-img {
   opacity: 0.3;
+}
+
+.card {
+  border-radius: 0 !important;
+  border: 0 !important;
 }
