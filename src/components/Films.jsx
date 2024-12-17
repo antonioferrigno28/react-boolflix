@@ -33,15 +33,7 @@ export default function Films({ movies, renderstars, languageFlag, Flag }) {
                     <h6 className="card-subtitle me-2 netflix-text">
                       Overview:{" "}
                     </h6>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Perspiciatis doloremque vero, voluptates, fuga
-                    exercitationem consequuntur commodi recusandae quod
-                    doloribus repellat, deserunt sunt illo totam debitis vel
-                    dolor! Voluptate, delectus quo. Lorem ipsum dolor, sit amet
-                    consectetur adipisicing elit. Possimus maxime quis accusamus
-                    molestiae, ex rerum, laboriosam veritatis, qui perspiciatis
-                    suscipit provident officia ullam aspernatur quas quae eius
-                    porro esse corporis!
+
                     {movie.overview}
                   </div>
                   <div className="d-flex align-content-center mt-2">
