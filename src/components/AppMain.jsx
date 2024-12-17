@@ -13,9 +13,10 @@ export default function AppMain({ showTitle, movies, tvSeries, renderstars }) {
     zh: "CN",
     ko: "KR",
   };
+
   return (
-    <main>
-      <div className="container pt-4">
+    <main className="flex-grow-1 d-flex flex-column">
+      <div className="container">
         {showTitle && (
           <>
             <Films

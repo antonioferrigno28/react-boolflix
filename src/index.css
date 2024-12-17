@@ -43,7 +43,7 @@ header {
 
 /* main/body content*/
 
-main {
+body {
   margin-top: 135px;
 
   background: linear-gradient(
@@ -51,6 +51,10 @@ main {
     rgb(29, 29, 29) 52%,
     rgba(121, 26, 9, 1) 97%
   );
+}
+
+.container {
+  padding-top: 150px;
 }
 
 .movie-card,
