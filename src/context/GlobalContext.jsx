@@ -2,8 +2,6 @@ import { createContext, useState } from "react";
 
 export const GlobalContext = createContext();
 
-const API_KEY = import.meta.env.VITE_API_KEY;
-
 const URL_movie = `https://api.themoviedb.org/3/search/movie?api_key=d967bf2ba828b9cc05b0e616f645bb10&query=`;
 
 const URL_tvseries = `https://api.themoviedb.org/3/search/tv?api_key=d967bf2ba828b9cc05b0e616f645bb10&query=`;
