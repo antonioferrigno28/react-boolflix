@@ -1,4 +1,4 @@
-export default function TvSeries({ tvSeries }) {
+export default function TvSeries({ tvSeries, Flag, languageFlag }) {
   return (
     <div className="pb-5">
       <h1 className="text-white">Serie Tv</h1>
@@ -15,9 +15,21 @@ export default function TvSeries({ tvSeries }) {
                 />
               </div>
               <div className="card-body tvSerie-info">
-                <h3 className="card-title">{tvSerie.name}</h3>
+                <div className="d-flex">
+                  <h3 className="card-title me-2 netflix-text">Titolo:</h3>
+                  <h3 className="card-title">{tvSerie.name}</h3>
+                </div>
                 <h6 className="card-subtitle mb-2">{tvSerie.original_name}</h6>
                 <div>{tvSerie.overview}</div>
+                <div>
+                  <span>
+                    <p>Lingua:</p>
+                  </span>
+                  <Flag
+                    code={languageFlag[tvSerie.original_language] || null}
+                    style={{ width: 30, height: 30 }}
+                  />
+                </div>
               </div>
             </div>
           </div>

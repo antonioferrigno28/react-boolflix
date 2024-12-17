@@ -1,4 +1,4 @@
-export default function Films({ movies }) {
+export default function Films({ movies, languageFlag, Flag }) {
   return (
     <>
       <div className="mb-5">
@@ -16,9 +16,41 @@ export default function Films({ movies }) {
                   />
                 </div>
                 <div className="card-body movie-info">
-                  <h3 className="card-title">{movie.title}</h3>
-                  <h6 className="card-subtitle mb-2">{movie.original_title}</h6>
-                  <div>{movie.overview}</div>
+                  <div className="d-flex">
+                    <h3 className="card-title me-2 netflix-text">Titolo:</h3>
+                    <h3 className="card-title">{movie.title}</h3>
+                  </div>
+                  <div className="d-flex mt-2">
+                    <h6 className="card-subtitle me-2 netflix-text">
+                      Titolo originale:
+                    </h6>
+                    <h6 className="card-subtitle mb-2">
+                      {movie.original_title}
+                    </h6>
+                  </div>
+
+                  <div className="mt-2">
+                    <h6 className="card-subtitle me-2 netflix-text">
+                      Overview:{" "}
+                    </h6>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Perspiciatis doloremque vero, voluptates, fuga
+                    exercitationem consequuntur commodi recusandae quod
+                    doloribus repellat, deserunt sunt illo totam debitis vel
+                    dolor! Voluptate, delectus quo. Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit. Possimus maxime quis accusamus
+                    molestiae, ex rerum, laboriosam veritatis, qui perspiciatis
+                    suscipit provident officia ullam aspernatur quas quae eius
+                    porro esse corporis!
+                    {movie.overview}
+                  </div>
+                  <div className="d-flex align-content-center mt-2">
+                    <h6 className="me-2 mt-1 netflix-text">Lingua:</h6>
+                    <Flag
+                      code={languageFlag[movie.original_language] || null}
+                      style={{ width: 30, height: 30 }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
